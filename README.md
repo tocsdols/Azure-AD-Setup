@@ -1,69 +1,100 @@
 # Azure-AD-Setup
-# Created a Windows Server virtual machine in Microsoft Azure to serve as the Domain Controller for the Active Directory lab environment.
+# This project demonstrates the deployment of an Active Directory environment using Microsoft Azure and Windows Server. The lab simulates enterprise domain administration and user management.
 
-##  Objective
+##  Objectives:
 
-The objective of this project is to build a basic Intrusion Detection System (IDS) capable of detecting suspicious network activity by monitoring TCP SYN packet behavior in real time.
+• Deploy a Windows Server virtual machine in Azure
+• Install Active Directory Domain Services (AD DS)
+• Configure a domain controller
+• Simulate enterprise user management
 
-The project focuses on identifying potential port scanning attempts by analyzing repeated connection requests from the same IP address within a specified time window.
+##  Skills Demonstrated:
 
-##  Skills Learned
+• Active Directory Administration
+• Azure Virtual Machine Deployment
+• Windows Server Configuration
+• User Account Management
+• Group Policy Configuration
+• Troubleshooting
 
-- Network traffic analysis
-- Packet sniffing with Scapy
-- TCP/IP and SYN packet understanding
-- Basic intrusion detection concepts
-- Python scripting for cybersecurity
-- Real-time threat monitoring
-- Logging and alert generation
-- Working with packet-level network data
+##  Technologies Used:
 
-##  Tools Used
+• Microsoft Azure
+• Windows Server 2025 Datacenter - x64 Gen2
+• Active Directory Domain Services
+• Windows 10 Client VM
 
-- Python 3
-- Scapy
-- Npcap (Windows packet capture support)
-- Command Prompt / Terminal
-- VS Code (or preferred code editor)
-- Git & GitHub
+##  Lab Environment
 
-##  Steps Used
+• Azure-hosted Windows Server acting as Domain Controller
+• Windows client machine joined to the domain
+• Domain Name: BENX.local
 
-1. Installed Python and Scapy for packet analysis.
-2. Configured packet capture support using Npcap (Windows).
-3. Created a packet sniffing script using Scapy.
-4. Filtered TCP packets with SYN flags enabled.
-5. Stored and tracked source IP addresses sending SYN packets.
-6. Implemented detection logic for repeated SYN requests within 60 seconds.
-7. Generated alerts when suspicious activity exceeded the threshold.
-8. Logged intrusion attempts into `scan_log.txt`.
-9. Tested the IDS in a controlled environment.
+##  Implementation Summary:
 
-##  How It Works
+1. Created a Windows Server VM in Azure
+2. Installed Active Directory Domain Services
+3. Promoted the server to a Domain Controller
+4. Created Organizational Units and user accounts
+5. Joined a client machine to the domain
+6. Tested domain authentication
 
-- The IDS monitors live TCP traffic using `Scapy`.
-- If it detects more than **10 SYN packets** from the same IP within 60 seconds, it flags it as a **potential scan**.
-- Detected scans are printed to the terminal **and logged into a file** named `scan_log.txt`.
+## Screenshots & Explanation
 
-**Output Example**
-Terminal Output:
+# PROJECT 1 — Azure AD Setup
+
+_Created a Resource Group, a container where my virtual machines and Virtual Networks will be inside and named it LAB_RG_
+<img width="1403" height="842" alt="image" src="https://github.com/user-attachments/assets/854c55a8-3239-4446-a588-0de4ade45115" />
+
+_Created my Virtual Network (Vnet_Samuel) and added 2 subnets to it, which were later linked to my windows server and windows 10 VM_
+<img width="1466" height="806" alt="image" src="https://github.com/user-attachments/assets/316c3aa3-5486-4395-99ba-b4f85d10cefc" />
+
+_Created a Windows Server virtual machine in Microsoft Azure to serve as the Domain Controller for the Active Directory lab environment_
+<img width="1459" height="824" alt="image" src="https://github.com/user-attachments/assets/8deba712-3c2a-4c2c-9a29-05e417fe4294" />
+<img width="1336" height="716" alt="image" src="https://github.com/user-attachments/assets/8e8b3097-a2ea-45aa-82e3-f761ef1e0eab" />
+
+_Initial Windows Server environment after deployment and configuration in Azure_
+<img width="1460" height="829" alt="image" src="https://github.com/user-attachments/assets/eb9b3b9e-45c1-497c-939e-774abf02ccfb" />
+
+_Installed Active Directory Domain Services (AD DS) role to enable domain management capabilities_
+<img width="1332" height="814" alt="image" src="https://github.com/user-attachments/assets/a345a8bd-f983-4430-a08f-7bfa7f44eda6" />
+
+_Promoted the Windows Server instance to a Domain Controller and configured a new domain environment_
+<img width="1333" height="815" alt="image" src="https://github.com/user-attachments/assets/62cb109b-f007-4dad-99ae-fbbbd3aab313" />
+<img width="1329" height="822" alt="image" src="https://github.com/user-attachments/assets/665125dc-e2b6-484e-bf20-29589d95a580" />
+
+_Verified successful Active Directory deployment and access to domain management tools_
+<img width="1332" height="828" alt="image" src="https://github.com/user-attachments/assets/9f62bc98-6275-4bb1-8c02-2496ed6be5c0" />
+
+_Logging in the Windows Server 2025 Datacenter through the Windows App and showing the windows 10 VM active state_
+<img width="1463" height="831" alt="image" src="https://github.com/user-attachments/assets/8f6e4dbf-cae3-4e1d-a412-3fb848ca2e83" />
+<img width="1326" height="835" alt="image" src="https://github.com/user-attachments/assets/86c21658-b325-4a03-9ddb-8ef7b0ed2492" />
+
+_Testing communication between the Windows VM and WIndows Server to enable quick _
 
 
-Intrusion Detection System is running...
-[2025-06-05 15:42:11] 🚨 Port scan detected from 192.168.86.5 — SYN packets: 11
-
-
-Log File (scan_log.txt):
-[2025-06-05 15:42:11] 🚨 Port scan detected from 192.168.86.5 — SYN packets: 11
 
 
 
-**Detection Logic**
-This IDS specifically looks for:
 
-TCP packets with the SYN flag, which indicates an attempt to initiate a connection.
-Repeated SYNs from the same IP address are counted.
-If an IP sends more than 10 SYNs in a short period, it's logged and flagged as a potential scan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,25 +107,6 @@ Watch the full project walkthrough and live demonstration here:
 
 
 
-## 📸 Screenshots
-**Real-time network sniffing**
-
-<img width="1190" height="594" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/948d809b-b52e-4527-ad75-0a098422e59c" />
-<img width="583" height="383" alt="Configuration" src="https://github.com/user-attachments/assets/860a608f-d15b-49af-93eb-25af270eed21" />
-
-
-
-**Port scan detection via TCP SYN pattern**
-
-<img width="655" height="417" alt="Pasted Graphic 5" src="https://github.com/user-attachments/assets/060a6cbb-6b78-49af-93f2-1751d3bbf013" />
-
-
-
-**Log file terminal output**
-
- - Alerts are logged to scan_log.txt for auditing
-
-<img width="689" height="437" alt="Pasted Graphic 6" src="https://github.com/user-attachments/assets/cdce6d42-143f-4629-8611-50355a265205" />
 
 
 
@@ -102,6 +114,5 @@ Watch the full project walkthrough and live demonstration here:
 
 
 
-**Samuel — Aspiring SOC Analyst & Cybersecurity Enthusiast**
 
 
