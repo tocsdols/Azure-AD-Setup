@@ -51,7 +51,7 @@
 
 ## Screenshots & Explanation
 
-# PROJECT 1 — Azure AD Setup
+# PROJECT 1 — [Azure-AD-Deployment](https://github.com/tocsdols/Azure-AD-Deployment)
 
 _Created a Resource Group, a container where my virtual machines and Virtual Networks will be inside and named it LAB_RG_
 <img width="850" height="842" alt="image" src="https://github.com/user-attachments/assets/854c55a8-3239-4446-a588-0de4ade45115" />
@@ -86,39 +86,8 @@ _Joined the Windows 10 client machine to the BENX.local Active Directory domain 
 
 ---
 
-# PROJECT 2 — User Administration
+# PROJECT 2 — [AD-User-Management](https://github.com/tocsdols/AD-User-Management)
 
-_Created domain user accounts and assigned them to appropriate departments and security groups_
-<img width="1326" height="827" alt="image" src="https://github.com/user-attachments/assets/a56f2b01-d295-430a-ab2a-7dc42032cc46" />
-
-_Created Organizational Units (OUs) to simulate departmental structure within an enterprise environment_
-<img width="1330" height="823" alt="image" src="https://github.com/user-attachments/assets/79d614bd-9c26-4d59-96d7-4df1abde4e8a" />
-
-_Configured security groups to support role-based access control and permission management_
-<img width="1325" height="824" alt="image" src="https://github.com/user-attachments/assets/eb4bcb3e-c1c7-4fb8-be1d-a79050a9e925" />
-<img width="1328" height="832" alt="image" src="https://github.com/user-attachments/assets/849309a2-eaed-4750-b936-580760c4ae61" />
----
-_Configured and deployed dual Active Directory Group Policy Objects (GPOs) using security filtering for the Engineering Organizational Unit (OU)._
-
-_Policy 1 (Enforcement): Configured Desktop Wallpaper policy to force a designated corporate background image_
-_Policy 2 (Restriction): Enabled Prevent changing desktop background to lock down user personalization settings_
-
-<img width="1326" height="830" alt="image" src="https://github.com/user-attachments/assets/c1362a46-29eb-49c3-9f0c-efbb320ee740" />
-<img width="1324" height="826" alt="image" src="https://github.com/user-attachments/assets/f85dc825-fb24-439a-810f-efc44895215c" />
-<img width="1324" height="825" alt="image" src="https://github.com/user-attachments/assets/ab8358af-86d4-4343-bad6-caa2113eaa65" />
-<img width="1324" height="823" alt="image" src="https://github.com/user-attachments/assets/c828a7c2-da3f-41ac-bd17-81b591deed9d" />
-
----
-
-Account Lockout
-_Simulated account lockout scenario and restored user access through Active Directory account management_
-<img width="1329" height="826" alt="image" src="https://github.com/user-attachments/assets/f6c17303-87ce-4732-9a15-d2fe55e0291e" />
-<img width="1163" height="679" alt="image" src="https://github.com/user-attachments/assets/3e4c3d9c-2af6-4b46-b52a-07fe78012f72" />
-
-_Performed password reset for a domain user account as part of standard Helpdesk support procedures_
-<img width="1329" height="815" alt="image" src="https://github.com/user-attachments/assets/9cdc84b5-0ab8-4dab-8fb0-1bef127029de" />
-
----
 
 ## Outcome
 
@@ -149,34 +118,6 @@ This lab strengthened foundational skills relevant to IT Support, System Adminis
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 🎥 Project Demo
-
-Watch the full project walkthrough and live demonstration here:
-
-[YouTube Demo Link](https://www.youtube.com/watch?v=yJuEgMhqsNk)
 
 
 
