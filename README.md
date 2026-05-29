@@ -88,6 +88,8 @@ _Joined the Windows 10 client machine to the BENX.local Active Directory domain 
 
 # PROJECT 2 — [AD-User-Management](https://github.com/tocsdols/AD-User-Management)
 
+---
+
 
 ## Outcome
 
